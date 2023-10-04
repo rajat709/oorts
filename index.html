@@ -37,16 +37,40 @@
             background-clip: text;
             color: transparent;
         }
+        .faq-container {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
     <h1>Dataoort is Coming Soon</h1>
     <div id="particles-container"></div>
+    <div class="faq-container" onclick="toggleFAQ()">
+        <strong>What is Dataoort?</strong>
+        <div id="faq-answer" style="display: none;">
+            Dataoort is a Data Science and Machine Learning Platform. It's your one-stop platform for all your data science needs, all in one place. Powered by the latest Nvidia H100 & A100 GPUs, it boosts your deep learning performance from days to minutes, all at the best pricing.
+        </div>
+    </div>
 
     <script>
         particlesJS.load("particles-container", "particles.json", function() {
             console.log("Particles.js loaded!");
         });
+
+        function toggleFAQ() {
+            var answer = document.getElementById("faq-answer");
+            if (answer.style.display === "none" || answer.style.display === "") {
+                answer.style.display = "block";
+            } else {
+                answer.style.display = "none";
+            }
+        }
     </script>
 </body>
 </html>
