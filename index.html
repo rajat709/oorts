@@ -1,18 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dataoort</title>
-    
-    <!-- Set the favicon -->
-    <link rel="icon" type="image/png" href="dataoort.png">
-    
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <!-- ... (your existing meta tags and title) ... -->
     <style>
         body {
             margin: 0;
             overflow: hidden;
+            padding: 0 10px; /* Add padding to prevent overlap */
         }
         #particles-container {
             position: fixed;
@@ -21,14 +15,14 @@
             width: 100%;
             height: 100%;
             background-color: black;
-            z-index: -1; /* Place particles behind other content */
+            z-index: -1;
         }
         h1 {
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            font-size: 48px; /* Increase the font size to make it larger */
+            font-size: 48px;
             text-align: center;
             z-index: 1;
             font-weight: bold;
@@ -46,22 +40,28 @@
             border-radius: 5px;
             cursor: pointer;
         }
+        #content-wrapper {
+            min-height: 100%; /* Minimum height to accommodate embedded content */
+            padding-bottom: 550px; /* Adjust this value as needed to prevent overlap */
+        }
         iframe {
-            position: fixed;
-            bottom: 10px; /* Move the iframe to the bottom right */
-            right: 10px; /* Move the iframe to the bottom right */
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
             width: 300px;
             height: 500px;
         }
     </style>
 </head>
 <body>
-    <h1><b>Dataoort is Coming Soon...</b></h1>
-    <div id="particles-container"></div>
-    <div class="faq-container" onclick="toggleFAQ()">
-        <strong>What is Dataoort ?</strong>
-        <div id="faq-answer" style="display: none;">
-            Dataoort is a Data Science and Machine Learning Platform. It's your one-stop platform for all your data science needs, all in one place. Powered by the latest Nvidia H100 & A100 GPUs, it boosts your deep learning performance from days to minutes, all at the best pricing.
+    <div id="content-wrapper">
+        <h1><b>Dataoort is Coming Soon...</b></h1>
+        <div id="particles-container"></div>
+        <div class="faq-container" onclick="toggleFAQ()">
+            <strong>What is Dataoort ?</strong>
+            <div id="faq-answer" style="display: none;">
+                Dataoort is a Data Science and Machine Learning Platform. It's your one-stop platform for all your data science needs, all in one place. Powered by the latest Nvidia H100 & A100 GPUs, it boosts your deep learning performance from days to minutes, all at the best pricing.
+            </div>
         </div>
     </div>
 
@@ -84,4 +84,3 @@
     </script>
 </body>
 </html>
-
