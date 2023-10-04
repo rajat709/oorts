@@ -39,8 +39,8 @@
         }
         .faq-container {
             position: absolute;
-            bottom: 10px;
-            right: 10px;
+            top: 10px; /* Move "What is Dataoort?" to the top right */
+            right: 10px; /* Move "What is Dataoort?" to the top right */
             background-color: rgba(255, 255, 255, 0.8);
             padding: 10px;
             border-radius: 5px;
@@ -48,23 +48,10 @@
         }
         iframe {
             position: fixed;
-            top: 5px; /* Adjust top value to move the iframe */
-            left: 2px; /* Adjust left value to move the iframe */
+            bottom: 10px; /* Move the iframe to the bottom right */
+            right: 10px; /* Move the iframe to the bottom right */
             width: 300px;
             height: 500px;
-        }
-
-        @media screen and (max-width: 768px) {
-            h1 {
-                font-size: 36px; /* Font size for mobile view */
-                top: 10%; /* Adjust the vertical position */
-            }
-            iframe {
-                width: 100%; /* Make the iframe full width */
-                height: 300px; /* Set the height as needed */
-                bottom: 0; /* Move the iframe to the bottom */
-                left: 0; /* Move the iframe to the left */
-            }
         }
     </style>
 </head>
@@ -97,3 +84,4 @@
     </script>
 </body>
 </html>
+
