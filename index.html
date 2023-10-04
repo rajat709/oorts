@@ -53,6 +53,19 @@
             width: 300px;
             height: 500px;
         }
+
+        @media screen and (max-width: 768px) {
+            h1 {
+                font-size: 36px; /* Font size for mobile view */
+                top: 10%; /* Adjust the vertical position */
+            }
+            iframe {
+                width: 100%; /* Make the iframe full width */
+                height: 300px; /* Set the height as needed */
+                bottom: 0; /* Move the iframe to the bottom */
+                left: 0; /* Move the iframe to the left */
+            }
+        }
     </style>
 </head>
 <body>
